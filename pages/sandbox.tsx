@@ -17,8 +17,9 @@ const CodeSanbox = () => {
   );
   const scale1 = useTransform(
     scrollYProgress,
-    [0, 0.1, 0.3, 0.4, 0.7, 0.8, 1],
-    [3, 2.8, 2.5, 2, 1, 1, 1]
+    [0, 0.1, 0.2, 0.3, 0.4, 0.45, 0.5, 0.6, 0.7, 0.8, 0.85, 0.9, 0.95, 1],
+    // [3, 2.8, 2.65, 2.5, 2.1, 1.87, 1.65, 1.2, 0.6, 0.65, 0.5, 0.4, 0.3, 0]
+    [3, 2.8, 2.65, 2.5, 2, 1.5, 1, 0, 0, 0, 0, 0, 0, 0]
   );
   const opacity = useTransform(
     scrollYProgress,
@@ -34,21 +35,101 @@ const CodeSanbox = () => {
 
   const squareScale = useTransform(
     scrollYProgress,
-    [0.3, 0.4, 0.7, 0.8, 1],
-    [1.72, 1.5, 1, 0.9, 0.5]
+    [0, 0.1, 0.2, 0.3, 0.4, 0.45, 0.5, 0.6, 0.7, 0.8, 0.85, 0.9, 0.95, 1],
+    [
+      1.72, 1.7, 1.69, 1.5, 1.3, 1.25, 1.2, 1.2, 1.18, 1.17, 1.14, 1.1, 1.0,
+      0.89,
+    ]
   );
 
   const squareOpacity = useTransform(
     scrollYProgress,
-    [0.3, 0.4, 0.7, 0.8, 1],
-    [1, 0, 0, 0, 0]
+    [0, 0.1, 0.2, 0.3, 0.4, 0.45, 0.5, 0.6, 0.7, 0.8, 0.85, 0.9, 0.95, 1],
+    [1, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0]
   );
 
   const squareOpacity2 = useTransform(
     scrollYProgress,
-    [0.3, 0.4, 0.7, 0.8, 1],
-    [0, 1, 0, 0, 0]
+    [0, 0.1, 0.2, 0.3, 0.4, 0.45, 0.5, 0.6, 0.7, 0.8, 0.85, 0.9, 0.95, 1],
+    [1, 1, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0]
   );
+  const squareOpacity3 = useTransform(
+    scrollYProgress,
+    [0, 0.1, 0.2, 0.3, 0.4, 0.45, 0.5, 0.6, 0.7, 0.8, 0.85, 0.9, 0.95, 1],
+    [1, 1, 1, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0]
+  );
+  const squareOpacity4 = useTransform(
+    scrollYProgress,
+    [0, 0.1, 0.2, 0.3, 0.4, 0.45, 0.5, 0.6, 0.7, 0.8, 0.85, 0.9, 0.95, 1],
+    [1, 1, 1, 1, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0]
+  );
+  const squareOpacity5 = useTransform(
+    scrollYProgress,
+    [0, 0.1, 0.2, 0.3, 0.4, 0.45, 0.5, 0.6, 0.7, 0.8, 0.85, 0.9, 0.95, 1],
+    [1, 1, 1, 1, 1, 1, 0, 0, 0, 0, 0, 0, 0, 0]
+  );
+
+  const squareOpacity6 = useTransform(
+    scrollYProgress,
+    [0, 0.1, 0.2, 0.3, 0.4, 0.45, 0.5, 0.6, 0.7, 0.8, 0.85, 0.9, 0.95, 1],
+    [1, 1, 1, 1, 1, 1, 1, 0, 0, 0, 0, 0, 0, 0]
+  );
+
+  const squareOpacity7 = useTransform(
+    scrollYProgress,
+    [0, 0.1, 0.2, 0.3, 0.4, 0.45, 0.5, 0.6, 0.7, 0.8, 0.85, 0.9, 0.95, 1],
+    [1, 1, 1, 1, 1, 1, 1, 1, 0, 0, 0, 0, 0, 0]
+  );
+
+  const squareOpacity8 = useTransform(
+    scrollYProgress,
+    [0, 0.1, 0.2, 0.3, 0.4, 0.45, 0.5, 0.6, 0.7, 0.8, 0.85, 0.9, 0.95, 1],
+    [1, 1, 1, 1, 1, 1, 1, 1, 1, 0, 0, 0, 0, 0]
+  );
+
+  const squareOpacity9 = useTransform(
+    scrollYProgress,
+    [0, 0.1, 0.2, 0.3, 0.4, 0.45, 0.5, 0.6, 0.7, 0.8, 0.85, 0.9, 0.95, 1],
+    [1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 0, 0, 0, 0]
+  );
+
+  const squareOpacity10 = useTransform(
+    scrollYProgress,
+    [0, 0.1, 0.2, 0.3, 0.4, 0.45, 0.5, 0.6, 0.7, 0.8, 0.85, 0.9, 0.95, 1],
+    [1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 0, 0, 0]
+  );
+
+  const squareOpacity11 = useTransform(
+    scrollYProgress,
+    [0, 0.1, 0.2, 0.3, 0.4, 0.45, 0.5, 0.6, 0.7, 0.8, 0.85, 0.9, 0.95, 1],
+    [1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 0, 0]
+  );
+
+  const squareOpacity12 = useTransform(
+    scrollYProgress,
+    [0, 0.1, 0.2, 0.3, 0.4, 0.45, 0.5, 0.6, 0.7, 0.8, 0.85, 0.9, 0.95, 1],
+    [1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1]
+  );
+
+  const codeInCloudPartOn1 = useTransform(
+    scrollYProgress,
+    [0, 0.5, 0.7, 0.8, 0.86],
+    [0, 0, 0.8, 0.9, 1]
+  );
+
+  const codeInCloudPartOn2 = useTransform(
+    scrollYProgress,
+    [0, 0.5, 0.7, 0.86, 0.88],
+    [0, 0, 0, 0.1, 1]
+  );
+
+  const codeInCloudPartOn3 = useTransform(
+    scrollYProgress,
+    [0, 0.5, 0.7, 0.86, 0.88, 0.9],
+    [0, 0, 0, 0, 0, 1]
+  );
+  const codeInCloudPartOn4 = useTransform(scrollYProgress, [0.9, 0.92], [0, 1]);
+  const finalTextScale = useTransform(scrollYProgress, [0.7, 0.9], [1, 0.95]);
 
   const childDefault = {
     initial: {
@@ -61,6 +142,21 @@ const CodeSanbox = () => {
       },
     },
   };
+
+  // backward
+  const scale2 = useTransform(
+    scrollYProgress,
+    [0.93, 0.96, 0.97],
+
+    [0.4, 0.6, 0.75]
+  );
+
+  const scale2Opacity = useTransform(
+    scrollYProgress,
+    [0.93, 0.96],
+
+    [0.8, 1]
+  );
   const childDefaultP = {
     initial: {
       opacity: 0,
@@ -122,7 +218,7 @@ const CodeSanbox = () => {
           <div className="sticky  top-1/2">
             <motion.figure
               style={{ scale, x: "-50%", y: "-50%", opacity }}
-              className=" absolute left-1/2 top-1/2 h-[100vh] w-[100vh] z-[0] "
+              className=" absolute left-1/2 top-1/2 h-[100vh] w-[100vh] z-[0] will-change-transform "
             >
               <motion.img
                 src="/gradient.webp"
@@ -132,7 +228,21 @@ const CodeSanbox = () => {
 
             <motion.figure
               style={{ scale: scale1, x: "-50%", y: "-50%", opacity: opacity1 }}
-              className=" absolute left-1/2 z-[-1] top-1/2 h-[100vh] w-[100vh] "
+              className=" absolute left-1/2 z-[-1] top-1/2 h-[100vh] w-[100vh] will-change-transform "
+            >
+              <motion.img
+                src="/gradient1.webp"
+                className="object-cover w-full h-full "
+              />
+            </motion.figure>
+            <motion.figure
+              style={{
+                scale: scale2,
+                x: "-50%",
+                y: "-50%",
+                opacity: scale2Opacity,
+              }}
+              className=" absolute left-1/2 top-1/2 h-[100vh] w-[100vh] z-[-13] will-change-transform "
             >
               <motion.img
                 src="/gradient1.webp"
@@ -140,7 +250,7 @@ const CodeSanbox = () => {
               />
             </motion.figure>
 
-            <motion.figure
+            {/* <motion.figure
               style={{ scale: scale1, x: "-50%", y: "-50%", opacity: opacity1 }}
               className=" absolute left-1/2 z-[-1] top-1/2 h-[100vh] w-[100vh] "
             >
@@ -148,15 +258,15 @@ const CodeSanbox = () => {
                 src="/gradient1.webp"
                 className="object-cover w-full h-full "
               />
-            </motion.figure>
+            </motion.figure> */}
 
             <motion.div
               style={
                 {
                   x: "-50%",
                   y: "-50%",
-                  "--squareScale": squareScale,
-                  "--square-opacity-border": squareOpacity2,
+                  //  "--squareScale": squareScale,
+                  //"--square-opacity-border": squareOpacity2,
                 } as any
               }
               className="top-1/2 left-1/2 absolute 
@@ -164,6 +274,37 @@ const CodeSanbox = () => {
               w-[30rem]
             "
             >
+              <motion.h2
+                style={{ y: "-50%", x: "-50%", scale: finalTextScale }}
+                className=" will-change-transform  absolute top-1/2 left-[calc(50%+2%)] whitespace-nowrap text-[12.8rem] text-white font-medium "
+              >
+                <motion.span
+                  style={{ opacity: codeInCloudPartOn1 }}
+                  className="opacity-0"
+                >
+                  Code
+                </motion.span>
+                &nbsp;
+                <motion.span
+                  className="opacity-0"
+                  style={{ opacity: codeInCloudPartOn2 }}
+                >
+                  in
+                </motion.span>
+                &nbsp;
+                <motion.span
+                  className="opacity-0"
+                  style={{ opacity: codeInCloudPartOn3 }}
+                >
+                  the cloud
+                </motion.span>
+                <motion.span
+                  className="opacity-0"
+                  style={{ opacity: codeInCloudPartOn4 }}
+                >
+                  .
+                </motion.span>
+              </motion.h2>
               <motion.figure
                 style={{
                   scale: squareScale,
@@ -186,17 +327,178 @@ const CodeSanbox = () => {
                   x: "-50%",
                   y: "-50%",
                 }}
-                className="absolute left-1/2 z-[-1] top-1/2 w-full h-full
-                before:absolute before:inset-0 before:scale-[var(--squareScale)] 
-                before:border-[1px] before:border-[#CEF144] 
-                before:h-full before:w-full
-                before:opacity-[var(--square-opacity-border)]
-                
-                
-                "
+                className="absolute left-1/2 z-[-1] top-1/2 w-full h-full"
               >
                 <motion.img
                   src="/square2.webp"
+                  className="object-cover w-full h-full "
+                />
+              </motion.figure>
+              <motion.figure
+                style={
+                  {
+                    scale: squareScale,
+                    opacity: squareOpacity3,
+                    x: "-50%",
+                    y: "-50%",
+                    "--squareOpacity3": squareOpacity3,
+                  } as any
+                }
+                className="absolute left-1/2 z-[-2] top-1/2 w-full h-full
+              
+    
+                              
+                "
+              >
+                <motion.img
+                  src="/square3.webp"
+                  className="object-cover w-full h-full "
+                />
+              </motion.figure>
+              <motion.figure
+                style={{
+                  scale: squareScale,
+                  opacity: squareOpacity4,
+                  x: "-50%",
+                  y: "-50%",
+                }}
+                className="absolute left-1/2 z-[-3] top-1/2 w-full h-full
+                  
+                "
+              >
+                <motion.img
+                  src="/square4.webp"
+                  className="object-cover w-full h-full "
+                />
+              </motion.figure>
+
+              <motion.figure
+                style={{
+                  scale: squareScale,
+                  opacity: squareOpacity5,
+                  x: "-50%",
+                  y: "-50%",
+                }}
+                className="absolute left-1/2 z-[-4] top-1/2 w-full h-full
+                  
+                "
+              >
+                <motion.img
+                  src="/square5.webp"
+                  className="object-cover w-full h-full "
+                />
+              </motion.figure>
+              <motion.figure
+                style={{
+                  scale: squareScale,
+                  opacity: squareOpacity6,
+                  x: "-50%",
+                  y: "-50%",
+                }}
+                className="absolute left-1/2 z-[-5] top-1/2 w-full h-full
+                  
+                "
+              >
+                <motion.img
+                  src="/square6.webp"
+                  className="object-cover w-full h-full "
+                />
+              </motion.figure>
+              <motion.figure
+                style={{
+                  scale: squareScale,
+                  opacity: squareOpacity7,
+                  x: "-50%",
+                  y: "-50%",
+                }}
+                className="absolute left-1/2 z-[-6] top-1/2 w-full h-full
+                  
+                "
+              >
+                <motion.img
+                  src="/square7.webp"
+                  className="object-cover w-full h-full "
+                />
+              </motion.figure>
+              <motion.figure
+                style={{
+                  scale: squareScale,
+                  opacity: squareOpacity8,
+                  x: "-50%",
+                  y: "-50%",
+                }}
+                className="absolute left-1/2 z-[-7] top-1/2 w-full h-full
+                  
+                "
+              >
+                <motion.img
+                  src="/square8.webp"
+                  className="object-cover w-full h-full "
+                />
+              </motion.figure>
+
+              <motion.figure
+                style={{
+                  scale: squareScale,
+                  opacity: squareOpacity9,
+                  x: "-50%",
+                  y: "-50%",
+                }}
+                className="absolute left-1/2 z-[-8] top-1/2 w-full h-full
+                  
+                "
+              >
+                <motion.img
+                  src="/square9.webp"
+                  className="object-cover w-full h-full "
+                />
+              </motion.figure>
+              <motion.figure
+                style={{
+                  scale: squareScale,
+                  opacity: squareOpacity10,
+                  x: "-50%",
+                  y: "-50%",
+                }}
+                className="absolute left-1/2 z-[-9] top-1/2 w-full h-full
+                  
+                "
+              >
+                <motion.img
+                  src="/square10.webp"
+                  className="object-cover w-full h-full "
+                />
+              </motion.figure>
+
+              <motion.figure
+                style={{
+                  scale: squareScale,
+                  opacity: squareOpacity11,
+                  x: "-50%",
+                  y: "-50%",
+                }}
+                className="absolute left-1/2 z-[-10] top-1/2 w-full h-full
+                  
+                "
+              >
+                <motion.img
+                  src="/square11.webp"
+                  className="object-cover w-full h-full "
+                />
+              </motion.figure>
+              <motion.figure
+                style={{
+                  scale: squareScale,
+                  opacity: squareOpacity12,
+                  x: "-50%",
+                  y: "-50%",
+                }}
+                className="absolute left-1/2 z-[-11] top-1/2 w-full h-full
+                  
+                "
+              >
+                <motion.img
+                  src="/square12.webp"
                   className="object-cover w-full h-full "
                 />
               </motion.figure>
