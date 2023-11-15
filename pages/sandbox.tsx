@@ -18,9 +18,9 @@ const CodeSanbox = () => {
   const scale1 = useTransform(
     scrollYProgress,
     [0, 0.1, 0.2, 0.3, 0.4, 0.45, 0.5, 0.6, 0.7, 0.8, 0.85, 0.9, 0.95, 1],
-    // [3, 2.8, 2.65, 2.5, 2.1, 1.87, 1.65, 1.2, 0.6, 0.65, 0.5, 0.4, 0.3, 0]
     [3, 2.8, 2.65, 2.5, 2, 1.5, 1, 0, 0, 0, 0, 0, 0, 0]
   );
+
   const opacity = useTransform(
     scrollYProgress,
     [0, 0.1, 0.3, 0.4, 0.7, 0.8, 1],
@@ -35,10 +35,10 @@ const CodeSanbox = () => {
 
   const squareScale = useTransform(
     scrollYProgress,
-    [0, 0.1, 0.2, 0.3, 0.4, 0.45, 0.5, 0.6, 0.7, 0.8, 0.85, 0.9, 0.95, 1],
+    [0, 0.1, 0.2, 0.3, 0.4, 0.45, 0.5, 0.6, 0.7, 0.8, 0.85, 0.9, 0.95, 0.97, 1],
     [
       1.72, 1.7, 1.69, 1.5, 1.3, 1.25, 1.2, 1.2, 1.18, 1.17, 1.14, 1.1, 1.0,
-      0.89,
+      0.89, 0.9,
     ]
   );
 
@@ -108,27 +108,42 @@ const CodeSanbox = () => {
   const squareOpacity12 = useTransform(
     scrollYProgress,
     [0, 0.1, 0.2, 0.3, 0.4, 0.45, 0.5, 0.6, 0.7, 0.8, 0.85, 0.9, 0.95, 1],
+    [1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 0]
+  );
+
+  const squareOpacity13 = useTransform(
+    scrollYProgress,
+    [0, 0.1, 0.2, 0.3, 0.4, 0.45, 0.5, 0.6, 0.7, 0.8, 0.85, 0.9, 0.95, 0.97, 1],
+    [1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 0]
+  );
+  const squareOpacity14 = useTransform(
+    scrollYProgress,
+    [0, 0.1, 0.2, 0.3, 0.4, 0.45, 0.5, 0.6, 0.7, 0.8, 0.85, 0.9, 0.95, 0.98],
     [1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1]
   );
 
   const codeInCloudPartOn1 = useTransform(
     scrollYProgress,
-    [0, 0.5, 0.7, 0.8, 0.86],
-    [0, 0, 0.8, 0.9, 1]
+    [0, 0.5, 0.7, 0.8, 0.86, 0.94],
+    [0, 0, 0.8, 0.9, 1, 0]
   );
 
   const codeInCloudPartOn2 = useTransform(
     scrollYProgress,
-    [0, 0.5, 0.7, 0.86, 0.88],
-    [0, 0, 0, 0.1, 1]
+    [0, 0.5, 0.7, 0.86, 0.88, 0.97],
+    [0, 0, 0, 0.1, 1, 0]
   );
 
   const codeInCloudPartOn3 = useTransform(
     scrollYProgress,
-    [0, 0.5, 0.7, 0.86, 0.88, 0.9],
-    [0, 0, 0, 0, 0, 1]
+    [0, 0.5, 0.7, 0.86, 0.88, 0.9, 0.98],
+    [0, 0, 0, 0, 0, 1, 0]
   );
-  const codeInCloudPartOn4 = useTransform(scrollYProgress, [0.9, 0.92], [0, 1]);
+  const codeInCloudPartOn4 = useTransform(
+    scrollYProgress,
+    [0.9, 0.92, 0.98],
+    [0, 1, 0]
+  );
   const finalTextScale = useTransform(scrollYProgress, [0.7, 0.9], [1, 0.95]);
 
   const childDefault = {
@@ -146,17 +161,25 @@ const CodeSanbox = () => {
   // backward
   const scale2 = useTransform(
     scrollYProgress,
-    [0.93, 0.96, 0.97],
+    [0, 0.93, 0.95, 0.96, 0.97, 0.98],
 
-    [0.4, 0.6, 0.75]
+    [0, 0.65, 1, 1.3, 1.6, 1.8]
   );
 
   const scale2Opacity = useTransform(
     scrollYProgress,
-    [0.93, 0.96],
+    [0, 0.94, 0.97, 0.98],
 
-    [0.8, 1]
+    [0, 0.85, 0.46, 0.25]
   );
+
+  const scale3Opacity = useTransform(
+    scrollYProgress,
+    [0, 0.94, 0.97, 0.98],
+
+    [0, 1, 0.87, 0.95]
+  );
+
   const childDefaultP = {
     initial: {
       opacity: 0,
@@ -212,7 +235,7 @@ const CodeSanbox = () => {
               "--scale": scale,
             } as any
           }
-          className=" h-[500vh] w-full"
+          className=" h-[400vh] w-full"
           ref={targetRef}
         >
           <div className="sticky  top-1/2">
@@ -235,6 +258,21 @@ const CodeSanbox = () => {
                 className="object-cover w-full h-full "
               />
             </motion.figure>
+            {/* <motion.figure
+              style={{
+                scale: scale2,
+                x: "-50%",
+                y: "-50%",
+                opacity: scale2Opacity,
+              }}
+              className=" absolute left-1/2 top-1/2 h-[100vh] w-[100vh] z-[-14] will-change-transform "
+            >
+              <motion.img
+                src="/gradient2.webp"
+                className="object-cover w-full h-full "
+              />
+            </motion.figure> */}
+
             <motion.figure
               style={{
                 scale: scale2,
@@ -242,23 +280,27 @@ const CodeSanbox = () => {
                 y: "-50%",
                 opacity: scale2Opacity,
               }}
-              className=" absolute left-1/2 top-1/2 h-[100vh] w-[100vh] z-[-13] will-change-transform "
+              className=" absolute left-1/2 top-1/2 h-[100vh] w-[100vh] z-[-15] will-change-transform "
             >
               <motion.img
-                src="/gradient1.webp"
+                src="/gradient2.webp"
                 className="object-cover w-full h-full "
               />
             </motion.figure>
-
-            {/* <motion.figure
-              style={{ scale: scale1, x: "-50%", y: "-50%", opacity: opacity1 }}
-              className=" absolute left-1/2 z-[-1] top-1/2 h-[100vh] w-[100vh] "
+            <motion.figure
+              style={{
+                scale: scale2,
+                x: "-50%",
+                y: "-50%",
+                opacity: scale3Opacity,
+              }}
+              className=" absolute left-1/2 top-1/2 h-[100vh] w-[100vh] z-[-16] will-change-transform "
             >
               <motion.img
-                src="/gradient1.webp"
+                src="/gradient3.webp"
                 className="object-cover w-full h-full "
               />
-            </motion.figure> */}
+            </motion.figure>
 
             <motion.div
               style={
@@ -499,6 +541,40 @@ const CodeSanbox = () => {
               >
                 <motion.img
                   src="/square12.webp"
+                  className="object-cover w-full h-full "
+                />
+              </motion.figure>
+
+              <motion.figure
+                style={{
+                  scale: squareScale,
+                  opacity: squareOpacity13,
+                  x: "-50%",
+                  y: "-50%",
+                }}
+                className="absolute left-1/2 z-[-12] top-1/2 w-full h-full
+                  
+                "
+              >
+                <motion.img
+                  src="/square13.webp"
+                  className="object-cover w-full h-full "
+                />
+              </motion.figure>
+
+              <motion.figure
+                style={{
+                  scale: squareScale,
+                  opacity: squareOpacity14,
+                  x: "-50%",
+                  y: "-50%",
+                }}
+                className="absolute left-1/2 z-[-13] top-1/2 w-full h-full
+                  
+                "
+              >
+                <motion.img
+                  src="/square14.webp"
                   className="object-cover w-full h-full "
                 />
               </motion.figure>
