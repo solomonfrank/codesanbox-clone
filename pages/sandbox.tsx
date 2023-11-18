@@ -260,9 +260,9 @@ const CodeSanbox = () => {
 
   const afterAnyWhereScale = useTransform(
     scrollYProgress,
-    [0, 0.93, 0.94, 0.95, 0.96, 0.97, 0.98],
+    [0, 0.93, 0.94, 0.95, 0.96, 0.97, 0.98, 0.99, 1],
 
-    [0.5, 0.6, 1, 1.2, 1.4, 1.5, 1.7]
+    [0.5, 0.6, 1, 1.2, 1.4, 1.5, 1.7, 2, 3.5]
   );
 
   const afterAnyWhereOpacity = useTransform(
@@ -270,6 +270,20 @@ const CodeSanbox = () => {
     [0, 0.93, 0.94, 0.95, 0.96, 0.97, 0.98],
 
     [0, 0, 0, 0.1, 0.15, 0.2, 0.4]
+  );
+
+  const collaborateOpacity = useTransform(
+    scrollYProgress,
+    [0, 0.7, 0.8, 0.97, 0.98, 0.985, 0.99, 1],
+
+    [0, 0, 0, 0, 0, 0.2, 1, 1]
+  );
+
+  const collaborateOpacityY = useTransform(
+    scrollYProgress,
+    [0, 0.985, 0.99, 1],
+
+    ["-20%", "-35%", "-50%", "-95%"]
   );
 
   const childDefaultP = {
@@ -774,6 +788,7 @@ const CodeSanbox = () => {
                 </motion.span>
               </h2>
             </motion.div>
+
             <motion.figure
               style={{
                 scale: afterAnyWhereScale,
@@ -790,6 +805,50 @@ const CodeSanbox = () => {
                 className="object-cover w-full h-full "
               />
             </motion.figure>
+
+            <motion.div
+              style={{
+                x: "-50%",
+                y: collaborateOpacityY,
+                opacity: collaborateOpacity,
+              }}
+              className="h-[100vh] w-[120rem] z-24 justify-center items-center  flex absolute left-1/2 top-1/2 max-w-[120rem] mx-auto"
+            >
+              <div className="basis-[58%]">
+                <figure className="w-[100vh]">
+                  <img
+                    src="/codeimagesize.webp"
+                    className="object-cover w-full h-auto "
+                  />
+                </figure>
+              </div>
+
+              <div className="ml-[97px] px-4">
+                <div className="h-[100vh] justify-center w-full flex flex-col gap-8">
+                  <p className="w-full  text-[3.2rem] text-white font-medium leading-[140%] [letter-spacing:-0.025em]">
+                    Code and collaborate from any editor or device:&nbsp;
+                    <span className="text-[#DCFF50]">
+                      browser, VS Code or iOS
+                    </span>
+                    <br />
+                    <br />
+                    Share a link to your code to get feedback, either async or
+                    with a&nbsp;
+                    <span className="text-[#DCFF50]">live coding</span>
+                  </p>
+                  <div className="flex flex-col gap-4 justify-start items-start">
+                    <a className="text-[2rem]">
+                      <span className="text-[#DCFF50]">
+                        Install VS Code Extension
+                      </span>
+                    </a>
+                    <a className="text-[2rem]">
+                      <span className="text-[#DCFF50]">Download iOS App</span>
+                    </a>
+                  </div>
+                </div>
+              </div>
+            </motion.div>
           </div>
         </div>
       </div>
