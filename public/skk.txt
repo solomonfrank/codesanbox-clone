@@ -1,0 +1,129 @@
+ @keyframes line {
+      from {
+        stroke-dashoffset: 1067;
+      }
+      to {
+        stroke-dashoffset: 0;
+      }
+    }
+
+    /*ARROW*/
+
+    .arrow {
+      stroke-dasharray: 1067;
+      stroke-dashoffset: 1067;
+      animation: line 5s 3.2s ease forwards ;
+    }
+
+    .line5 {
+      stroke-dasharray: 1067;
+      stroke-dashoffset: 1067;
+      animation: line 7s 2.8s ease forwards ;
+    }
+    .line4 {
+      stroke-dasharray: 1067;
+      stroke-dashoffset: 1067;
+      animation: line 5s 2.2s ease forwards ;
+    }
+
+    .line3 {
+      stroke-dasharray: 1067;
+      stroke-dashoffset: 1067;
+      animation: line 5s 1.2s ease forwards ;
+    }
+
+    .line2 {
+      stroke-dasharray: 1067;
+      stroke-dashoffset: 1067;
+      animation: line 5s 0.8s ease forwards ;
+    }
+
+    .line1 {
+      stroke-dasharray: 1067;
+      stroke-dashoffset: 1067;
+      animation: line 5s ease forwards ;
+    }
+
+    /*CIRCLES*/
+
+    .circle {
+      transform: scale(0);
+      transform-box: fill-box;
+      transform-origin: center;
+    }
+    .circle1 {
+      animation: popUp 1s 0.6s ease forwards ;
+    }
+    .circle2 {
+      animation: popUp 1s 1s ease forwards ;
+    }
+    .circle3 {
+      animation: popUp 0.6s 1.8s ease forwards ;
+    }
+    .circle4 {
+      animation: popUp 0.6s 2.2s ease forwards ;
+    }
+    .circle5 {
+      animation: popUp 0.6s 3.2s ease forwards ;
+    }
+    .circle6 {
+      animation: popUp 0.6s 4.2s ease forwards ;
+    }
+
+    /*AVATARS*/
+
+    .avatar1 {
+      animation:  popUp 0.6s 2s ease forwards;
+    }
+    .avatar2 {
+      animation:  popUp 0.6s 2.2s ease forwards;
+    }
+    .avatar3 {
+      animation:  popUp 0.6s 2.4s ease forwards;
+    }
+    .avatar4 {
+      animation:  popUp 0.6s 2.4s ease forwards;
+    }
+    .avatar5 {
+      animation:  popUp 0.6s 4.4s ease forwards;
+    }
+
+    @keyframes popUp {
+      from {
+        transform: scale(0);
+      }
+      to {
+        transform: scale(1);
+      }
+    }
+
+    /*  TEXT*/
+
+    @keyframes fadeIn {
+      from {
+        opacity: 0;
+      }
+      to {
+        opacity: 1;
+      }
+    }
+
+    .text {
+      opacity: 0;
+    }
+
+    .text1 {
+      animation: fadeIn 1s 0.8s forwards ;
+    }
+
+    .text2 {
+      animation: fadeIn 1s 2.6s forwards ;
+    }
+
+    .text3 {
+      animation: fadeIn 1s 2.8s forwards ;
+    }
+
+    .text4 {
+      animation: fadeIn 1s 4.6s forwards ;
+    }

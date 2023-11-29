@@ -63,9 +63,42 @@ const config: Config = {
             "animation-timing-function": "cubic-bezier(0.74,0.25,0.76, 1 )",
           },
         },
+        "line-stroke": {
+          from: {
+            "stroke-dashoffset": "1067",
+          },
+
+          to: {
+            "stroke-dashoffset": "0",
+          },
+        },
+        circle: {
+          from: {
+            transform: "scale(0)",
+          },
+          to: {
+            transform: "scale(1)",
+          },
+        },
+        "text-fadeIn": {
+          from: {
+            opacity: "0",
+          },
+          to: {
+            opacity: "1",
+          },
+        },
       },
       animation: {
         "icon-stroke": "icon-stroke 1.5s infinite forwards alternate",
+        "line-stroke":
+          "line-stroke 5s calc(var(--index) * 0.4s) ease forwards ",
+
+        circle: "circle 0.6s calc(var(--cIndex) * 1s) ease forwards  ",
+        "text-fadeIn1": "text-fadeIn 1s 0.8s ease forwards",
+        "text-fadeIn2": "text-fadeIn 1s 2.6s ease forwards",
+        "text-fadeIn3": "text-fadeIn 1s 2.8s ease forwards",
+        "text-fadeIn4": "text-fadeIn 1s 4.6s ease forwards",
       },
     },
   },
