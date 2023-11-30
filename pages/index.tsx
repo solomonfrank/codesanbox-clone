@@ -13,6 +13,7 @@ import { SiDeno } from "react-icons/si";
 import { SiTypescript } from "react-icons/si";
 import { SiAstro } from "react-icons/si";
 import { SiSvelte } from "react-icons/si";
+import { Repository } from "@/components/repository";
 
 const brands = [
   { logo: FaReact, text: "React + Vite" },
@@ -468,7 +469,9 @@ const CodeSanbox = () => {
           </motion.div>
         </div>
 
-        <div className="h-full  absolute right-0 top-[calc(var(--navigation-height)*2)] bottom-0">
+        <Repository />
+
+        {/* <motion.div className="h-full  absolute right-0 top-[calc(var(--navigation-height)*2)] bottom-0">
           <a className=" p-[48px] w-[40rem] flex flex-col flex-grow gap-[4rem] border border-b border-[#1D1D1D]">
             <div>
               <h2 className="text-[32px] text-white leading-[140%] -tracking-[0.025em]">
@@ -527,7 +530,7 @@ const CodeSanbox = () => {
               </span>
             </span>
           </a>
-        </div>
+        </motion.div> */}
       </div>
       <div className=" z-50 text-white w-full h-[90px] relative bg-[#161616] hover:opacity-60">
         <Marquee className="h-full ">
