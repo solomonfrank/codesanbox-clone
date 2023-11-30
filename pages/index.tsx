@@ -416,678 +416,687 @@ const CodeSanbox = () => {
     },
   };
   return (
-    <main className="bg-[#000]">
-      <div className="bg-[#161616] z-50 h-screen relative">
-        <Navigation />
-        <header className=" h-[var(--navigation-height)] bg-[#161616] border border-b border-[#1D1D1D]">
-          <div className="max-w-[120rem] mx-auto h-full">
-            <div className="flex items-center justify-center h-full">
-              <div className="flex gap-2 items-center mr-auto justify-center text-sm">
-                <span className=" rounded-full  px-[8px] py-[1px] text-[12px] text-white bg-[#644ed7]">
-                  New
-                </span>
-                <h3 className="text-[#d1d1d1]">
-                  Introducing a Unified Development Platform
-                </h3>
-                <p className="text-[#a3a3a3]">
-                  Start coding with our new Devboxes and evolved Sandboxes.
-                </p>
+    <>
+      <main className="bg-[#000]">
+        <div className="bg-[#161616] z-50 h-screen relative">
+          <Navigation />
+          <header className=" h-[var(--navigation-height)] bg-[#161616] border border-b border-[#1D1D1D]">
+            <div className="max-w-[120rem] mx-auto h-full">
+              <div className="flex items-center justify-center h-full">
+                <div className="flex gap-2 items-center mr-auto justify-center text-sm">
+                  <span className=" rounded-full  px-[8px] py-[1px] text-[12px] text-white bg-[#644ed7]">
+                    New
+                  </span>
+                  <h3 className="text-[#d1d1d1]">
+                    Introducing a Unified Development Platform
+                  </h3>
+                  <p className="text-[#a3a3a3]">
+                    Start coding with our new Devboxes and evolved Sandboxes.
+                  </p>
+                </div>
+                <p className="text-[#e3ff73] text-sm">Learn more</p>
               </div>
-              <p className="text-[#e3ff73] text-sm">Learn more</p>
             </div>
-          </div>
-        </header>
-        <div className="max-w-[120rem] mx-auto pt-72 ">
-          <motion.div className="max-w-[calc(100%-2rem)]">
-            <motion.div
-              className="mb-8 "
-              initial="initial"
-              animate="final"
-              transition={{ ease: "easeInOut" }}
-              variants={childDefault}
-            >
-              <AnimatedText
-                el="div"
-                text={["Instant dev environment"]}
-                // text="Instant dev environment"
-                className="text-[11.5rem] leading-[12.65rem] font-medium  "
-              />
-            </motion.div>
-
-            <div className="w-full">
-              <motion.h2
+          </header>
+          <div className="max-w-[120rem] mx-auto pt-72 ">
+            <motion.div className="max-w-[calc(100%-2rem)]">
+              <motion.div
+                className="mb-8 "
                 initial="initial"
                 animate="final"
                 transition={{ ease: "easeInOut" }}
-                variants={childDefaultP}
-                className="text-[#fff] text-[3.2rem] mb-16 max-w-[calc(100%-300px)] font-normal"
+                variants={childDefault}
               >
-                CodeSandbox keeps you in flow by giving you cloud development
-                environments that resume in 1 second.
-              </motion.h2>
-            </div>
-          </motion.div>
-        </div>
+                <AnimatedText
+                  el="div"
+                  text={["Instant dev environment"]}
+                  // text="Instant dev environment"
+                  className="text-[11.5rem] leading-[12.65rem] font-medium  "
+                />
+              </motion.div>
 
-        <Repository />
-      </div>
-      <div className=" z-50 text-white w-full h-[90px] relative bg-[#161616] hover:opacity-60">
-        <Marquee className="h-full ">
-          <div className="h-full flex items-center gap-[50px] group [&_div:last-child]:mr-7 ">
-            {brands.map((item, idx) => (
-              <div
-                key={item.text}
-                className={`py-6 hover:opacity-100 cursor-pointer`}
-              >
-                <a className="flex gap-2 items-center ">
-                  <item.logo size={32} />
-
-                  <span className="text-[2rem]">{item.text}</span>
-                </a>
+              <div className="w-full">
+                <motion.h2
+                  initial="initial"
+                  animate="final"
+                  transition={{ ease: "easeInOut" }}
+                  variants={childDefaultP}
+                  className="text-[#fff] text-[3.2rem] mb-16 max-w-[calc(100%-300px)] font-normal"
+                >
+                  CodeSandbox keeps you in flow by giving you cloud development
+                  environments that resume in 1 second.
+                </motion.h2>
               </div>
-            ))}
+            </motion.div>
           </div>
-        </Marquee>
-      </div>
-      <div className="relative z-10 w-full overflow-x-clip">
-        <div
-          style={
-            {
-              "--opacity-border": opacity,
-              "--scale": scale,
-            } as any
-          }
-          className=" h-[900vh] w-full"
-          ref={targetRef}
-        >
-          <div className="sticky  top-1/2">
-            <motion.figure
-              style={{ scale, x: "-50%", y: "-50%", opacity }}
-              className=" absolute left-1/2 top-1/2 h-[100vh] w-[100vh] z-[0] will-change-transform "
-            >
-              <motion.img
-                src="/gradient.webp"
-                className="object-cover w-full h-full "
-              />
-            </motion.figure>
 
-            <motion.figure
-              style={{ scale: scale, x: "-50%", y: "-50%", opacity: opacity1 }}
-              className=" absolute left-1/2 z-[-1] top-1/2 h-[100vh] w-[100vh] will-change-transform "
-            >
-              <motion.img
-                src="/gradient1.webp"
-                className="object-cover w-full h-full "
-              />
-            </motion.figure>
+          <Repository />
+        </div>
+        <div className=" z-50 text-white w-full h-[90px] relative bg-[#161616] hover:opacity-60">
+          <Marquee className="h-full ">
+            <div className="h-full flex items-center gap-[50px] group [&_div:last-child]:mr-7 ">
+              {brands.map((item, idx) => (
+                <div
+                  key={item.text}
+                  className={`py-6 hover:opacity-100 cursor-pointer`}
+                >
+                  <a className="flex gap-2 items-center ">
+                    <item.logo size={32} />
 
-            <motion.figure
-              style={{
-                scale: scale2,
-                x: "-50%",
-                y: "-50%",
-                opacity: scale2Opacity,
-              }}
-              className=" absolute left-1/2 top-1/2 h-[100vh] w-[100vh] z-[-15] will-change-transform "
-            >
-              <motion.img
-                src="/gradient2.webp"
-                className="object-cover w-full h-full "
-              />
-            </motion.figure>
-            <motion.figure
-              style={{
-                scale: scale2,
-                x: "-50%",
-                y: "-50%",
-                opacity: scale3Opacity,
-              }}
-              className=" absolute left-1/2 top-1/2 h-[100vh] w-[100vh] z-[-16] will-change-transform "
-            >
-              <motion.img
-                src="/gradient3.webp"
-                className="object-cover w-full h-full "
-              />
-            </motion.figure>
+                    <span className="text-[2rem]">{item.text}</span>
+                  </a>
+                </div>
+              ))}
+            </div>
+          </Marquee>
+        </div>
+        <div className="relative z-10 w-full overflow-x-clip">
+          <div
+            style={
+              {
+                "--opacity-border": opacity,
+                "--scale": scale,
+              } as any
+            }
+            className=" h-[1000vh] w-full"
+            ref={targetRef}
+          >
+            <div className="sticky  top-1/2">
+              <motion.figure
+                style={{ scale, x: "-50%", y: "-50%", opacity }}
+                className=" absolute left-1/2 top-1/2 h-[100vh] w-[100vh] z-[0] will-change-transform "
+              >
+                <motion.img
+                  src="/gradient.webp"
+                  className="object-cover w-full h-full "
+                />
+              </motion.figure>
 
-            <motion.figure
-              style={{
-                scale: scale4,
-                x: "-50%",
-                y: "-50%",
-                opacity: scale4Opacity,
-              }}
-              className=" absolute left-1/2 top-1/2  z-[-17] will-change-transform "
-            >
-              <motion.img
-                src="/codeimage.gif"
-                className="object-cover w-full h-auto "
-              />
-            </motion.figure>
-
-            <motion.figure
-              style={{
-                scale: scale5,
-                x: "-50%",
-                y: "-50%",
-                opacity: scale5Opacity1,
-              }}
-              className=" absolute left-1/2 top-1/2 h-[100vh] w-[100vh] z-[-18] will-change-transform "
-            >
-              <motion.img
-                src="/gradient4.webp"
-                className="object-cover w-full h-full "
-              />
-            </motion.figure>
-
-            <motion.figure
-              style={{
-                scale: scale5,
-                x: "-50%",
-                y: "-50%",
-                opacity: scale5Opacity2,
-              }}
-              className=" absolute left-1/2 top-1/2 h-[100vh] w-[100vh] z-[-20] will-change-transform "
-            >
-              <motion.img
-                src="/gradient3.webp"
-                className="object-cover w-full h-full "
-              />
-            </motion.figure>
-
-            <motion.div
-              style={
-                {
+              <motion.figure
+                style={{
+                  scale: scale,
                   x: "-50%",
                   y: "-50%",
-                  //  "--squareScale": squareScale,
-                  //"--square-opacity-border": squareOpacity2,
-                } as any
-              }
-              className="top-1/2 left-1/2 absolute 
+                  opacity: opacity1,
+                }}
+                className=" absolute left-1/2 z-[-1] top-1/2 h-[100vh] w-[100vh] will-change-transform "
+              >
+                <motion.img
+                  src="/gradient1.webp"
+                  className="object-cover w-full h-full "
+                />
+              </motion.figure>
+
+              <motion.figure
+                style={{
+                  scale: scale2,
+                  x: "-50%",
+                  y: "-50%",
+                  opacity: scale2Opacity,
+                }}
+                className=" absolute left-1/2 top-1/2 h-[100vh] w-[100vh] z-[-15] will-change-transform "
+              >
+                <motion.img
+                  src="/gradient2.webp"
+                  className="object-cover w-full h-full "
+                />
+              </motion.figure>
+              <motion.figure
+                style={{
+                  scale: scale2,
+                  x: "-50%",
+                  y: "-50%",
+                  opacity: scale3Opacity,
+                }}
+                className=" absolute left-1/2 top-1/2 h-[100vh] w-[100vh] z-[-16] will-change-transform "
+              >
+                <motion.img
+                  src="/gradient3.webp"
+                  className="object-cover w-full h-full "
+                />
+              </motion.figure>
+
+              <motion.figure
+                style={{
+                  scale: scale4,
+                  x: "-50%",
+                  y: "-50%",
+                  opacity: scale4Opacity,
+                }}
+                className=" absolute left-1/2 top-1/2  z-[-17] will-change-transform "
+              >
+                <motion.img
+                  src="/codeimage.gif"
+                  className="object-cover w-full h-auto "
+                />
+              </motion.figure>
+
+              <motion.figure
+                style={{
+                  scale: scale5,
+                  x: "-50%",
+                  y: "-50%",
+                  opacity: scale5Opacity1,
+                }}
+                className=" absolute left-1/2 top-1/2 h-[100vh] w-[100vh] z-[-18] will-change-transform "
+              >
+                <motion.img
+                  src="/gradient4.webp"
+                  className="object-cover w-full h-full "
+                />
+              </motion.figure>
+
+              <motion.figure
+                style={{
+                  scale: scale5,
+                  x: "-50%",
+                  y: "-50%",
+                  opacity: scale5Opacity2,
+                }}
+                className=" absolute left-1/2 top-1/2 h-[100vh] w-[100vh] z-[-20] will-change-transform "
+              >
+                <motion.img
+                  src="/gradient3.webp"
+                  className="object-cover w-full h-full "
+                />
+              </motion.figure>
+
+              <motion.div
+                style={
+                  {
+                    x: "-50%",
+                    y: "-50%",
+                    //  "--squareScale": squareScale,
+                    //"--square-opacity-border": squareOpacity2,
+                  } as any
+                }
+                className="top-1/2 left-1/2 absolute 
               h-[30rem] 
               w-[30rem]
             "
-            >
-              <motion.h2
-                style={{ y: "-50%", x: "-50%", scale: finalTextScale }}
-                className=" will-change-transform  absolute top-1/2 left-[calc(50%+2%)] whitespace-nowrap text-[12.8rem] text-white font-medium "
               >
-                <motion.span
-                  style={{ opacity: codeInCloudPartOn1 }}
-                  className="opacity-0"
+                <motion.h2
+                  style={{ y: "-50%", x: "-50%", scale: finalTextScale }}
+                  className=" will-change-transform  absolute top-1/2 left-[calc(50%+2%)] whitespace-nowrap text-[12.8rem] text-white font-medium "
                 >
-                  Code
-                </motion.span>
-                &nbsp;
-                <motion.span
-                  className="opacity-0"
-                  style={{ opacity: codeInCloudPartOn2 }}
-                >
-                  in
-                </motion.span>
-                &nbsp;
-                <motion.span
-                  className="opacity-0"
-                  style={{ opacity: codeInCloudPartOn3 }}
-                >
-                  the cloud
-                </motion.span>
-                <motion.span
-                  className="opacity-0"
-                  style={{ opacity: codeInCloudPartOn4 }}
-                >
-                  .
-                </motion.span>
-              </motion.h2>
+                  <motion.span
+                    style={{ opacity: codeInCloudPartOn1 }}
+                    className="opacity-0"
+                  >
+                    Code
+                  </motion.span>
+                  &nbsp;
+                  <motion.span
+                    className="opacity-0"
+                    style={{ opacity: codeInCloudPartOn2 }}
+                  >
+                    in
+                  </motion.span>
+                  &nbsp;
+                  <motion.span
+                    className="opacity-0"
+                    style={{ opacity: codeInCloudPartOn3 }}
+                  >
+                    the cloud
+                  </motion.span>
+                  <motion.span
+                    className="opacity-0"
+                    style={{ opacity: codeInCloudPartOn4 }}
+                  >
+                    .
+                  </motion.span>
+                </motion.h2>
 
-              <motion.figure
-                style={{
-                  scale: squareScale,
-                  x: "-50%",
-                  y: "-50%",
-                  opacity: squareOpacity0,
-                }}
-                className=" absolute left-1/2 z-[1] top-1/2 w-full h-full"
-              >
-                <motion.img
-                  src="/square3.webp"
-                  className="object-cover w-full h-full "
-                />
-              </motion.figure>
-              <motion.figure
-                style={{
-                  scale: squareScale,
-                  x: "-50%",
-                  y: "-50%",
-                  opacity: squareOpacity,
-                }}
-                className=" absolute left-1/2 z-[0] top-1/2 w-full h-full"
-              >
-                <motion.img
-                  src="/square1.webp"
-                  className="object-cover w-full h-full "
-                />
-              </motion.figure>
-              <motion.figure
-                style={
-                  {
+                <motion.figure
+                  style={{
                     scale: squareScale,
-                    opacity: squareOpacity3,
                     x: "-50%",
                     y: "-50%",
-                    "--squareOpacity3": squareOpacity3,
+                    opacity: squareOpacity0,
+                  }}
+                  className=" absolute left-1/2 z-[1] top-1/2 w-full h-full"
+                >
+                  <motion.img
+                    src="/square3.webp"
+                    className="object-cover w-full h-full "
+                  />
+                </motion.figure>
+                <motion.figure
+                  style={{
+                    scale: squareScale,
+                    x: "-50%",
+                    y: "-50%",
+                    opacity: squareOpacity,
+                  }}
+                  className=" absolute left-1/2 z-[0] top-1/2 w-full h-full"
+                >
+                  <motion.img
+                    src="/square1.webp"
+                    className="object-cover w-full h-full "
+                  />
+                </motion.figure>
+                <motion.figure
+                  style={
+                    {
+                      scale: squareScale,
+                      opacity: squareOpacity3,
+                      x: "-50%",
+                      y: "-50%",
+                      "--squareOpacity3": squareOpacity3,
+                    } as any
+                  }
+                  className="absolute left-1/2 z-[-2] top-1/2 w-full h-full"
+                >
+                  <motion.img
+                    src="/square3.webp"
+                    className="object-cover w-full h-full "
+                  />
+                </motion.figure>
+                <motion.figure
+                  style={{
+                    scale: squareScale,
+                    opacity: squareOpacity4,
+                    x: "-50%",
+                    y: "-50%",
+                  }}
+                  className="absolute left-1/2 z-[-3] top-1/2 w-full h-full
+                  
+                "
+                >
+                  <motion.img
+                    src="/square4.webp"
+                    className="object-cover w-full h-full "
+                  />
+                </motion.figure>
+
+                <motion.figure
+                  style={{
+                    scale: squareScale,
+                    opacity: squareOpacity5,
+                    x: "-50%",
+                    y: "-50%",
+                  }}
+                  className="absolute left-1/2 z-[-4] top-1/2 w-full h-full
+                  
+                "
+                >
+                  <motion.img
+                    src="/square5.webp"
+                    className="object-cover w-full h-full "
+                  />
+                </motion.figure>
+                <motion.figure
+                  style={{
+                    scale: squareScale,
+                    opacity: squareOpacity6,
+                    x: "-50%",
+                    y: "-50%",
+                  }}
+                  className="absolute left-1/2 z-[-5] top-1/2 w-full h-full
+                  
+                "
+                >
+                  <motion.img
+                    src="/square6.webp"
+                    className="object-cover w-full h-full "
+                  />
+                </motion.figure>
+                <motion.figure
+                  style={{
+                    scale: squareScale,
+                    opacity: squareOpacity7,
+                    x: "-50%",
+                    y: "-50%",
+                  }}
+                  className="absolute left-1/2 z-[-6] top-1/2 w-full h-full
+                  
+                "
+                >
+                  <motion.img
+                    src="/square7.webp"
+                    className="object-cover w-full h-full "
+                  />
+                </motion.figure>
+                <motion.figure
+                  style={{
+                    scale: squareScale,
+                    opacity: squareOpacity8,
+                    x: "-50%",
+                    y: "-50%",
+                  }}
+                  className="absolute left-1/2 z-[-7] top-1/2 w-full h-full
+                  
+                "
+                >
+                  <motion.img
+                    src="/square8.webp"
+                    className="object-cover w-full h-full "
+                  />
+                </motion.figure>
+
+                <motion.figure
+                  style={{
+                    scale: squareScale,
+                    opacity: squareOpacity9,
+                    x: "-50%",
+                    y: "-50%",
+                  }}
+                  className="absolute left-1/2 z-[-8] top-1/2 w-full h-full
+                  
+                "
+                >
+                  <motion.img
+                    src="/square9.webp"
+                    className="object-cover w-full h-full "
+                  />
+                </motion.figure>
+                <motion.figure
+                  style={{
+                    scale: squareScale,
+                    opacity: squareOpacity10,
+                    x: "-50%",
+                    y: "-50%",
+                  }}
+                  className="absolute left-1/2 z-[-9] top-1/2 w-full h-full
+                  
+                "
+                >
+                  <motion.img
+                    src="/square10.webp"
+                    className="object-cover w-full h-full "
+                  />
+                </motion.figure>
+
+                <motion.figure
+                  style={{
+                    scale: squareScale,
+                    opacity: squareOpacity11,
+                    x: "-50%",
+                    y: "-50%",
+                  }}
+                  className="absolute left-1/2 z-[-10] top-1/2 w-full h-full
+                  
+                "
+                >
+                  <motion.img
+                    src="/square11.webp"
+                    className="object-cover w-full h-full "
+                  />
+                </motion.figure>
+                <motion.figure
+                  style={{
+                    scale: squareScale,
+                    opacity: squareOpacity12,
+                    x: "-50%",
+                    y: "-50%",
+                  }}
+                  className="absolute left-1/2 z-[-11] top-1/2 w-full h-full
+                  
+                "
+                >
+                  <motion.img
+                    src="/square12.webp"
+                    className="object-cover w-full h-full "
+                  />
+                </motion.figure>
+
+                <motion.figure
+                  style={{
+                    scale: squareScale,
+                    opacity: squareOpacity13,
+                    x: "-50%",
+                    y: "-50%",
+                  }}
+                  className="absolute left-1/2 z-[-12] top-1/2 w-full h-full
+                  
+                "
+                >
+                  <motion.img
+                    src="/square13.webp"
+                    className="object-cover w-full h-full "
+                  />
+                </motion.figure>
+
+                <motion.figure
+                  style={{
+                    scale: squareScale,
+                    opacity: squareOpacity14,
+                    x: "-50%",
+                    y: "-50%",
+                  }}
+                  className="absolute left-1/2 z-[-13] top-1/2 w-full h-full
+                  
+                "
+                >
+                  <motion.img
+                    src="/square14.webp"
+                    className="object-cover w-full h-full "
+                  />
+                </motion.figure>
+              </motion.div>
+
+              <motion.div
+                style={
+                  {
+                    "--movesparkText": movesparkText,
+                    x: "-50%",
+                    y: "calc(50% + var(--movesparkText))",
+                    opacity: movesparkTextOpacity,
+
+                    //  "--squareScale": squareScale,
+                    //"--square-opacity-border": squareOpacity2,
                   } as any
                 }
-                className="absolute left-1/2 z-[-2] top-1/2 w-full h-full"
+                className="w-[50vw] left-1/2 top-1/2 z-[-18] absolute flex flex-col justify-center items-center gap-4"
               >
-                <motion.img
-                  src="/square3.webp"
-                  className="object-cover w-full h-full "
-                />
-              </motion.figure>
-              <motion.figure
-                style={{
-                  scale: squareScale,
-                  opacity: squareOpacity4,
-                  x: "-50%",
-                  y: "-50%",
-                }}
-                className="absolute left-1/2 z-[-3] top-1/2 w-full h-full
-                  
-                "
+                <motion.figure className="h-[25rem] w-[25rem] flex  items-center">
+                  <motion.img
+                    src="/spark.webp"
+                    className="  object-cover w-full h-[auto] "
+                  />
+                </motion.figure>
+                <p className="text-[4rem]  text-center text-white leading-[120%] [letter_spacing:-0.05rem]">
+                  Run your code in powerful{" "}
+                  <span className="text-[#DCFF50]">microVMs</span> and build
+                  anything without limits. We configure your environment for you
+                  and keep your
+                  <span className="text-[#DCFF50]"> code always ready</span>,
+                  behind a URL.
+                </p>
+              </motion.div>
+
+              <motion.div
+                style={
+                  {
+                    y: "-50%",
+                    "--anytimeOpacityText": anytimeOpacityText,
+                    x: "-50%",
+
+                    "--anyWhereScale": anytimeLineScale,
+                    "--anyWhereOpacity": anytimeOpacity,
+                  } as any
+                }
+                className=" left-1/2 top-1/2 z-[-21] after:opacity-[var(--anyWhereOpacity)] after:origin-center after:scale-[var(--anyWhereScale)] absolute after:absolute after:h-[2px] after:w-full after:bg-[linear-gradient(90deg,_rgba(123,_97,_255,_0)_0%,_rgb(123,_97,_255)_49.48%,_rgba(123,_97,_255,_0)_100%)]"
               >
-                <motion.img
-                  src="/square4.webp"
-                  className="object-cover w-full h-full "
-                />
-              </motion.figure>
+                <h2 className="will-change-transform  whitespace-nowrap text-[12.8rem] text-white font-medium ">
+                  <motion.span style={{ opacity: anytimeOpacity }}>
+                    Anytime,
+                  </motion.span>
+                  &nbsp;
+                  <motion.span style={{ opacity: anyWhereOpacity }}>
+                    anywhere.
+                  </motion.span>
+                </h2>
+              </motion.div>
+
+              {/* <div>Start Here</div> */}
 
               <motion.figure
                 style={{
-                  scale: squareScale,
-                  opacity: squareOpacity5,
+                  scale: afterAnyWhereScale,
+                  opacity: afterAnyWhereOpacity,
                   x: "-50%",
                   y: "-50%",
                 }}
-                className="absolute left-1/2 z-[-4] top-1/2 w-full h-full
+                className="absolute left-1/2 z-[-23] h-[100vh] top-1/2 w-[100vh] will-change-transform
                   
                 "
               >
                 <motion.img
-                  src="/square5.webp"
-                  className="object-cover w-full h-full "
-                />
-              </motion.figure>
-              <motion.figure
-                style={{
-                  scale: squareScale,
-                  opacity: squareOpacity6,
-                  x: "-50%",
-                  y: "-50%",
-                }}
-                className="absolute left-1/2 z-[-5] top-1/2 w-full h-full
-                  
-                "
-              >
-                <motion.img
-                  src="/square6.webp"
-                  className="object-cover w-full h-full "
-                />
-              </motion.figure>
-              <motion.figure
-                style={{
-                  scale: squareScale,
-                  opacity: squareOpacity7,
-                  x: "-50%",
-                  y: "-50%",
-                }}
-                className="absolute left-1/2 z-[-6] top-1/2 w-full h-full
-                  
-                "
-              >
-                <motion.img
-                  src="/square7.webp"
-                  className="object-cover w-full h-full "
-                />
-              </motion.figure>
-              <motion.figure
-                style={{
-                  scale: squareScale,
-                  opacity: squareOpacity8,
-                  x: "-50%",
-                  y: "-50%",
-                }}
-                className="absolute left-1/2 z-[-7] top-1/2 w-full h-full
-                  
-                "
-              >
-                <motion.img
-                  src="/square8.webp"
-                  className="object-cover w-full h-full "
+                  src="/gradient6.webp"
+                  className=" absolute inset-0 object-cover w-full h-full"
                 />
               </motion.figure>
 
               <motion.figure
                 style={{
-                  scale: squareScale,
-                  opacity: squareOpacity9,
+                  scale: afterAnyWhereScale,
+                  opacity: afterAnyWhere1Opacity,
                   x: "-50%",
                   y: "-50%",
                 }}
-                className="absolute left-1/2 z-[-8] top-1/2 w-full h-full
-                  
+                className="absolute left-1/2 z-[-23]  h-[100vh] top-1/2 w-[100vh] will-change-transform    
                 "
               >
                 <motion.img
-                  src="/square9.webp"
-                  className="object-cover w-full h-full "
-                />
-              </motion.figure>
-              <motion.figure
-                style={{
-                  scale: squareScale,
-                  opacity: squareOpacity10,
-                  x: "-50%",
-                  y: "-50%",
-                }}
-                className="absolute left-1/2 z-[-9] top-1/2 w-full h-full
-                  
-                "
-              >
-                <motion.img
-                  src="/square10.webp"
-                  className="object-cover w-full h-full "
+                  src="/gradient7.webp"
+                  className=" absolute inset-0 object-cover w-full h-full"
                 />
               </motion.figure>
 
               <motion.figure
                 style={{
-                  scale: squareScale,
-                  opacity: squareOpacity11,
+                  scale: collaborateThreeScale,
+                  opacity: collaborateOpacitythree,
                   x: "-50%",
                   y: "-50%",
                 }}
-                className="absolute left-1/2 z-[-10] top-1/2 w-full h-full
-                  
-                "
+                className="absolute left-1/2 z-[-23]  h-[100vh] top-1/2 w-[100vh] will-change-transform"
               >
                 <motion.img
-                  src="/square11.webp"
-                  className="object-cover w-full h-full "
+                  src="/gradient8.webp"
+                  className=" absolute inset-0 object-cover w-full h-full"
                 />
               </motion.figure>
-              <motion.figure
+
+              <motion.div
                 style={{
-                  scale: squareScale,
-                  opacity: squareOpacity12,
                   x: "-50%",
-                  y: "-50%",
+                  y: collaborateOpacityY,
+                  opacity: collaborateOpacity,
                 }}
-                className="absolute left-1/2 z-[-11] top-1/2 w-full h-full
-                  
-                "
+                className=" h-[100vh] w-[120rem] z-[24] flex flex-col absolute left-1/2 top-1/2 max-w-[120rem] mx-auto"
               >
-                <motion.img
-                  src="/square12.webp"
-                  className="object-cover w-full h-full "
-                />
-              </motion.figure>
+                <div className="items-center  flex justify-center ">
+                  <div className="basis-[58%]">
+                    <figure className="w-[100vh]">
+                      <img
+                        src="/codeimagesize.webp"
+                        className="object-cover w-full h-auto "
+                      />
+                    </figure>
+                  </div>
 
-              <motion.figure
-                style={{
-                  scale: squareScale,
-                  opacity: squareOpacity13,
-                  x: "-50%",
-                  y: "-50%",
-                }}
-                className="absolute left-1/2 z-[-12] top-1/2 w-full h-full
-                  
-                "
-              >
-                <motion.img
-                  src="/square13.webp"
-                  className="object-cover w-full h-full "
-                />
-              </motion.figure>
-
-              <motion.figure
-                style={{
-                  scale: squareScale,
-                  opacity: squareOpacity14,
-                  x: "-50%",
-                  y: "-50%",
-                }}
-                className="absolute left-1/2 z-[-13] top-1/2 w-full h-full
-                  
-                "
-              >
-                <motion.img
-                  src="/square14.webp"
-                  className="object-cover w-full h-full "
-                />
-              </motion.figure>
-            </motion.div>
-
-            <motion.div
-              style={
-                {
-                  "--movesparkText": movesparkText,
-                  x: "-50%",
-                  y: "calc(50% + var(--movesparkText))",
-                  opacity: movesparkTextOpacity,
-
-                  //  "--squareScale": squareScale,
-                  //"--square-opacity-border": squareOpacity2,
-                } as any
-              }
-              className="w-[50vw] left-1/2 top-1/2 z-[-18] absolute flex flex-col justify-center items-center gap-4"
-            >
-              <motion.figure className="h-[25rem] w-[25rem] flex  items-center">
-                <motion.img
-                  src="/spark.webp"
-                  className="  object-cover w-full h-[auto] "
-                />
-              </motion.figure>
-              <p className="text-[4rem]  text-center text-white leading-[120%] [letter_spacing:-0.05rem]">
-                Run your code in powerful{" "}
-                <span className="text-[#DCFF50]">microVMs</span> and build
-                anything without limits. We configure your environment for you
-                and keep your
-                <span className="text-[#DCFF50]"> code always ready</span>,
-                behind a URL.
-              </p>
-            </motion.div>
-
-            <motion.div
-              style={
-                {
-                  y: "-50%",
-                  "--anytimeOpacityText": anytimeOpacityText,
-                  x: "-50%",
-
-                  "--anyWhereScale": anytimeLineScale,
-                  "--anyWhereOpacity": anytimeOpacity,
-                } as any
-              }
-              className=" left-1/2 top-1/2 z-[-21] after:opacity-[var(--anyWhereOpacity)] after:origin-center after:scale-[var(--anyWhereScale)] absolute after:absolute after:h-[2px] after:w-full after:bg-[linear-gradient(90deg,_rgba(123,_97,_255,_0)_0%,_rgb(123,_97,_255)_49.48%,_rgba(123,_97,_255,_0)_100%)]"
-            >
-              <h2 className="will-change-transform  whitespace-nowrap text-[12.8rem] text-white font-medium ">
-                <motion.span style={{ opacity: anytimeOpacity }}>
-                  Anytime,
-                </motion.span>
-                &nbsp;
-                <motion.span style={{ opacity: anyWhereOpacity }}>
-                  anywhere.
-                </motion.span>
-              </h2>
-            </motion.div>
-
-            {/* <div>Start Here</div> */}
-
-            <motion.figure
-              style={{
-                scale: afterAnyWhereScale,
-                opacity: afterAnyWhereOpacity,
-                x: "-50%",
-                y: "-50%",
-              }}
-              className="absolute left-1/2 z-[-23] h-[100vh] top-1/2 w-[100vh] will-change-transform
-                  
-                "
-            >
-              <motion.img
-                src="/gradient6.webp"
-                className=" absolute inset-0 object-cover w-full h-full"
-              />
-            </motion.figure>
-
-            <motion.figure
-              style={{
-                scale: afterAnyWhereScale,
-                opacity: afterAnyWhere1Opacity,
-                x: "-50%",
-                y: "-50%",
-              }}
-              className="absolute left-1/2 z-[-23]  h-[100vh] top-1/2 w-[100vh] will-change-transform    
-                "
-            >
-              <motion.img
-                src="/gradient7.webp"
-                className=" absolute inset-0 object-cover w-full h-full"
-              />
-            </motion.figure>
-
-            <motion.figure
-              style={{
-                scale: collaborateThreeScale,
-                opacity: collaborateOpacitythree,
-                x: "-50%",
-                y: "-50%",
-              }}
-              className="absolute left-1/2 z-[-23]  h-[100vh] top-1/2 w-[100vh] will-change-transform"
-            >
-              <motion.img
-                src="/gradient8.webp"
-                className=" absolute inset-0 object-cover w-full h-full"
-              />
-            </motion.figure>
-
-            <motion.div
-              style={{
-                x: "-50%",
-                y: collaborateOpacityY,
-                opacity: collaborateOpacity,
-              }}
-              className=" h-[100vh] w-[120rem] z-[24] flex flex-col absolute left-1/2 top-1/2 max-w-[120rem] mx-auto"
-            >
-              <div className="items-center  flex justify-center ">
-                <div className="basis-[58%]">
-                  <figure className="w-[100vh]">
-                    <img
-                      src="/codeimagesize.webp"
-                      className="object-cover w-full h-auto "
-                    />
-                  </figure>
-                </div>
-
-                <div className="ml-[97px] px-4">
-                  <div className="h-[100vh] justify-center w-full flex flex-col gap-8">
-                    <p className="w-full  text-[3.2rem] text-white font-medium leading-[140%] [letter-spacing:-0.025em]">
-                      Code and collaborate from any editor or device:&nbsp;
-                      <span className="text-[#DCFF50]">
-                        browser, VS Code or iOS
-                      </span>
-                      <br />
-                      <br />
-                      Share a link to your code to get feedback, either async or
-                      with a&nbsp;
-                      <span className="text-[#DCFF50]">live coding</span>
-                    </p>
-                    <div className="flex flex-col gap-4 justify-start items-start">
-                      <a className="text-[2rem]">
+                  <div className="ml-[97px] px-4">
+                    <div className="h-[100vh] justify-center w-full flex flex-col gap-8">
+                      <p className="w-full  text-[3.2rem] text-white font-medium leading-[140%] [letter-spacing:-0.025em]">
+                        Code and collaborate from any editor or device:&nbsp;
                         <span className="text-[#DCFF50]">
-                          Install VS Code Extension
+                          browser, VS Code or iOS
                         </span>
-                      </a>
-                      <a className="text-[2rem]">
-                        <span className="text-[#DCFF50]">Download iOS App</span>
-                      </a>
+                        <br />
+                        <br />
+                        Share a link to your code to get feedback, either async
+                        or with a&nbsp;
+                        <span className="text-[#DCFF50]">live coding</span>
+                      </p>
+                      <div className="flex flex-col gap-4 justify-start items-start">
+                        <a className="text-[2rem]">
+                          <span className="text-[#DCFF50]">
+                            Install VS Code Extension
+                          </span>
+                        </a>
+                        <a className="text-[2rem]">
+                          <span className="text-[#DCFF50]">
+                            Download iOS App
+                          </span>
+                        </a>
+                      </div>
                     </div>
                   </div>
                 </div>
-              </div>
-              <div>
-                <h2 className="mb-[6rem] text-[12.8rem] text-white text-center font-medium leading-[90%]">
-                  Accelerate your git workflow.
-                </h2>
-                <div className="flex">
-                  <div className="flex flex-col gap-3 justify-center max-w-[42rem]">
-                    <p className="text-[3.2rem] text-white leading-[140%] [letter-spacing:-0.025em]">
-                      Never wait for a dev server again. We make all your
-                      branches &nbsp;
-                      <span className="text-[#DCFF50]">
-                        instantly available
-                      </span>
-                    </p>
-                    <p className="text-[3.2rem] text-white leading-[140%] [letter-spacing:-0.025em]">
-                      Hop between branches and open PRs with our branches &nbsp;
-                      <span className="text-[#DCFF50]">
-                        built-in git controls
-                      </span>
-                    </p>
+                <div>
+                  <h2 className="mb-[6rem] text-[12.8rem] text-white text-center font-medium leading-[90%]">
+                    Accelerate your git workflow.
+                  </h2>
+                  <div className="flex">
+                    <div className="flex flex-col gap-3 justify-center max-w-[42rem]">
+                      <p className="text-[3.2rem] text-white leading-[140%] [letter-spacing:-0.025em]">
+                        Never wait for a dev server again. We make all your
+                        branches &nbsp;
+                        <span className="text-[#DCFF50]">
+                          instantly available
+                        </span>
+                      </p>
+                      <p className="text-[3.2rem] text-white leading-[140%] [letter-spacing:-0.025em]">
+                        Hop between branches and open PRs with our branches
+                        &nbsp;
+                        <span className="text-[#DCFF50]">
+                          built-in git controls
+                        </span>
+                      </p>
+                    </div>
+                    <figure>
+                      <img
+                        src="/album.webp"
+                        className="w-full h-auto [mask-image:linear-gradient(-90deg,_black_50%,_transparent_100%)]"
+                      />
+                    </figure>
                   </div>
-                  <figure>
-                    <img
-                      src="/album.webp"
-                      className="w-full h-auto [mask-image:linear-gradient(-90deg,_black_50%,_transparent_100%)]"
-                    />
-                  </figure>
                 </div>
-              </div>
-            </motion.div>
+              </motion.div>
 
-            <motion.div
-              style={{ x: "-50%", y: "-50%" }}
-              className="absolute left-1/2 z-[100]  h-[100vh] top-1/2 w-[100vh] flex justify-center items-center"
-            >
-              <h3 className="max-w-[90rem] text-[12.8rem] text-center text-white leading-[90%] font-medium">
-                <motion.span style={{ opacity: shortebOpacityFirst }}>
-                  Shorten
-                </motion.span>
-                &nbsp;
-                <motion.span style={{ opacity: shortebOpacityTwo }}>
-                  the review
-                </motion.span>
-                &nbsp;
-                <motion.span style={{ opacity: shortebOpacityThree }}>
-                  cycle.
-                </motion.span>
-              </h3>
-            </motion.div>
+              <motion.div
+                style={{ x: "-50%", y: "-50%" }}
+                className="absolute left-1/2 z-[100]  h-[100vh] top-1/2 w-[100vh] flex justify-center items-center"
+              >
+                <h3 className="max-w-[90rem] text-[12.8rem] text-center text-white leading-[90%] font-medium">
+                  <motion.span style={{ opacity: shortebOpacityFirst }}>
+                    Shorten
+                  </motion.span>
+                  &nbsp;
+                  <motion.span style={{ opacity: shortebOpacityTwo }}>
+                    the review
+                  </motion.span>
+                  &nbsp;
+                  <motion.span style={{ opacity: shortebOpacityThree }}>
+                    cycle.
+                  </motion.span>
+                </h3>
+              </motion.div>
 
-            <motion.div
-              style={{ x: "-50%", y: "-50%", opacity: opacityTeam }}
-              className="absolute left-1/2 z-[100]   h-[100vh] top-1/2  w-[120rem] flex justify-center items-center mx-auto"
-            >
-              <div className="max-w-[40rem] w-[48%] px-4 flex justify-center flex-col gap-[3.2rem]">
-                <p className="text-[3.2rem] text-white leading-[140%]">
-                  We give you a
-                  <span className="text-[#DCFF50]">
-                    live dev environment for every PR
-                  </span>
-                </p>
-                <p className="text-[3.2rem] text-white leading-[140%]">
-                  <span className="text-[#DCFF50]">
-                    No need to switch context.
-                  </span>
-                  Open the PR to see the code, tests and a preview, make any
-                  necessary changes, and merge it.
-                </p>
-              </div>
-              <div className="max-w-[58.33%] flex flex-col justify-center">
-                <TeamTree
-                  className="max-h-full max-w-full  [&_path]:animate-line-stroke   
+              <motion.div
+                style={{ x: "-50%", y: "-50%", opacity: opacityTeam }}
+                className="absolute left-1/2 z-[100]   h-[100vh] top-1/2  w-[120rem] flex justify-center items-center mx-auto"
+              >
+                <div className="max-w-[40rem] w-[48%] px-4 flex justify-center flex-col gap-[3.2rem]">
+                  <p className="text-[3.2rem] text-white leading-[140%]">
+                    We give you a
+                    <span className="text-[#DCFF50]">
+                      live dev environment for every PR
+                    </span>
+                  </p>
+                  <p className="text-[3.2rem] text-white leading-[140%]">
+                    <span className="text-[#DCFF50]">
+                      No need to switch context.
+                    </span>
+                    Open the PR to see the code, tests and a preview, make any
+                    necessary changes, and merge it.
+                  </p>
+                </div>
+                <div className="max-w-[58.33%] flex flex-col justify-center">
+                  <TeamTree
+                    className="max-h-full max-w-full  [&_path]:animate-line-stroke   
                 [&_path]:[stroke-dasharray:1067] [&_path]:[stroke-dashoffset:1067]
                 [&_.circle]:scale-0 [&_.circle]:[transform-box:fill-box]
                 [&_.circle]:animate-circle
@@ -1098,20 +1107,28 @@ const CodeSanbox = () => {
                 [&_.text4]:animate-text-fadeIn4
                 
                 "
-                />
-              </div>
-            </motion.div>
+                  />
+                </div>
+              </motion.div>
+            </div>
           </div>
         </div>
+        <div className="max-w-[120rem] mx-auto mt-[40rem]">
+          <h2 className="text-[9.6rem] text-white text-center mx-auto max-w-[60.8rem] leading-[100%] font-medium -tracking-[0.05em] ">
+            From idea <br />
+            to production <br />{" "}
+            <span className="text-[#E3FF73]">in record time</span>
+          </h2>
+        </div>
+      </main>
+
+      <div className="fixed bg-background flex items-center justify-center z-40 w-full top-0 left-0 right-0 bottom-0 w h-full md:hidden">
+        <p className="text-white text-[32px]">
+          {" "}
+          Website available only on desktop
+        </p>
       </div>
-      <div className="max-w-[120rem] mx-auto mt-[40rem]">
-        <h2 className="text-[9.6rem] text-white text-center mx-auto max-w-[60.8rem] leading-[100%] font-medium -tracking-[0.05em] ">
-          From idea <br />
-          to production <br />{" "}
-          <span className="text-[#E3FF73]">in record time</span>
-        </h2>
-      </div>
-    </main>
+    </>
   );
 };
 
